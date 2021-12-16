@@ -1,0 +1,262 @@
+body{
+    background-color:rgb(255, 160, 160);
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.form{
+    padding: 20px 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    background-color: rgb(255, 217, 217);
+    border: 3px dotted palevioletred;
+ 
+}
+
+.form>h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.2;
+
+}
+
+.form:hover{
+    border-color: rgb(233, 62, 227);
+}
+
+/* input */
+
+.form-field{
+    position: relative;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    align-items: center;
+    background-color: rgb(204, 255, 204);
+    color: rgb(33, 56, 34);
+    transition: background-color 350ms ease-in;
+}
+
+.form-input{
+    width: 300px;
+    height: 30px;
+    padding-left: 35px;
+    border: 3px double seagreen;
+    color: rgb(0, 75, 5);
+    background-color: rgb(193, 253, 193);
+    transition: background-color 350ms ease-in;
+}
+
+.form-field:hover{
+    background-color: rgb(249, 255, 158);
+    color: rgb(167, 108, 0);
+    border-color: rgb(255, 176, 73);
+}
+
+.form-field:hover .form-input{
+    background-color: rgb(249, 255, 158);
+    color: rgb(167, 108, 0);
+    border-color: rgb(255, 176, 73);
+}
+
+.form-input:focus + .form-lable,
+.form-input:not(:placeholder-shown) + .form-lable{
+    transform: translateY(-40px);
+}
+
+.form-lable{
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    transition: transform 250ms ease-in;
+}
+
+.form-icon{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../../cite2/image/pseudo/smile2.svg);
+    background-size: contain;
+}
+
+/* subtitle */
+
+.subtitle{
+    padding: 10px;
+    margin: 20px auto 5px;
+    width: 232px;
+    text-align: center;
+    background-color: rgb(181, 222, 255);
+    border: 3px double rgb(46, 97, 139);
+    color: rgb(33, 42, 56);
+    transition: background-color 250ms ease-in;
+
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+
+}
+
+.subtitle:hover{
+    background-color: rgb(255, 142, 142);
+    border-color: rgb(255, 33, 33);
+    color: rgb(97, 6, 6);
+}
+
+/* checkbox */
+
+.theme-options{
+    list-style: none;
+    margin: 0 auto;
+    padding: 10px 92px;
+    width: 100px;
+    background-color: rgb(174, 255, 174);
+    border: 3px double seagreen;
+    color: rgb(33, 56, 34);
+    transition: background-color 350ms ease-in;
+}
+
+.theme-options:hover{
+    background-color: rgb(249, 255, 158);
+    border-color: rgb(255, 176, 73);
+    color: rgb(97, 65, 6);
+}
+
+.option{
+    display: flex;
+    align-items: flex-start;
+    margin: 4px;
+}
+
+.unvisible{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.visible-checkbox{
+    display: block;
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+    background-color: transparent;
+    border-radius: 2px;
+    border: 3px double seagreen;
+}
+
+.unvisible:checked + .visible-checkbox{
+    background-color: rgb(255, 102, 0);
+    border: 3px solid rgb(255, 102, 0);
+    background-image: url(../../cite2/image/pseudo/checkmark.svg);
+    background-size: contain;
+}
+
+.unvisible:focus + .visible-checkbox{
+    box-shadow: 0 0 0 3px rgb(235, 195, 195);
+}
+
+.text{
+    transform: translateX(0);
+    transition: transform 250ms ease-in;
+}
+
+.unvisible:checked ~ .text{
+    transform: translateX(45px);
+}
+
+/* radio */
+
+.experience-options{
+    list-style: none;
+    margin: 0 auto;
+    padding: 10px 92px;
+    width: fit-content;
+    background-color: rgb(174, 255, 174);
+    border: 3px double seagreen;
+    color: rgb(33, 56, 34);
+    transition: background-color 350ms ease-in;
+}
+
+.experience-options:hover{
+    background-color: rgb(249, 255, 158);
+    border-color: rgb(255, 176, 73);
+    color: rgb(97, 65, 6);
+}
+
+.visible-radio{
+    display: block;
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 3px double seagreen;
+}
+
+.unvisible:checked + .visible-radio{
+    background-color: rgb(255, 102, 0);
+    border: 3px solid rgb(255, 102, 0);
+    background-image: url(../../cite2/image/pseudo/checkmark.svg);
+    background-size: contain;
+}
+
+.unvisible:focus + .visible-radio{
+    /* border-color: rgb(255, 176, 73); */
+    box-shadow: 0 0 0 3px rgb(235, 195, 195);
+}
+
+/* comment */
+
+.comment{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
+    border: 3px double seagreen;
+}
+
+/* policy */
+
+.policy{
+    display: flex;
+    padding: 20px 70px;
+    border: 3px double seagreen;
+    
+}
+
+.button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 14px 35px;
+    border: 3px double rebeccapurple;
+
+    background-color: rgb(214, 174, 255);
+    color: rgb(67, 1, 133);
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1;
+
+    transition: background-color 350ms ease-in;
+}
+
+.button:hover{
+    background-color: rgb(255, 142, 142);
+    border-color: rgb(255, 33, 33);
+    color: rgb(97, 6, 6);
+}

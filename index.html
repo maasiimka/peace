@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <form class="form js-speaker-form">
+    
+    <h1>Форма для миру</h1>
+
+    <label class="form-field">
+      <input type="text" name="user" placeholder=" " class="form-input">
+      <span class="form-lable">Ім'я</span>
+      <span class="form-icon"></span>
+    </label>
+
+
+    <label class="form-field">
+      <input type="text" name="tel" placeholder=" " class="form-input">
+      <span class="form-lable">Причина сварки</span>
+      <span class="form-icon"></span>
+    </label>
+
+
+    <label class="form-field">
+      <input type="text" name="mail" placeholder=" " class="form-input">
+      <span class="form-lable">Як будем вирішувати?</span>  
+      <span class="form-icon"></span>
+    </label>
+
+
+    <div role="group"> 
+      <h2 class="subtitle">Хто винен</h2>
+      <ul class="theme-options">
+        <li>
+          <label class="option">
+            <input class="unvisible" type="checkbox" name="theme" value="html">
+            <span class="visible-checkbox"></span>
+            <span class="text">ТИ</span>
+          </label>
+        </li>
+        <li>
+          <label class="option">
+            <input class="unvisible" type="checkbox" name= "theme" value="css">
+            <span class="visible-checkbox"></span>
+            <span class="text">Я</span>
+          </label>
+        </li>
+        <li>
+          <label class="option">
+            <input class="unvisible" type="checkbox" name="theme" value="js">
+            <span class="visible-checkbox"></span>
+            <span class="text">Небо</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div role="group">
+      <h2 class="subtitle">Ступінь злості</h2>
+      <ul class="experience-options">
+        <li>
+          <label class="option">
+            <input class="unvisible"  type="radio" name="experience" value="junior">
+            <span class="visible-radio"></span>
+            <span class="text">Не сильно</span>
+          </label>
+        </li>
+        <li>
+          
+          <label class="option">
+            <input class="unvisible"  type="radio" name="experience" value="middle">
+            <span class="visible-radio"></span>
+            <span class="text">Сильно</span>
+          </label>
+        </li>
+        <li>
+          
+          <label class="option">
+            <input class="unvisible"  type="radio" name="experience" value="senior">
+            <span class="visible-radio"></span>
+            <span class="text">Іди нахуй зі своєю формою</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+      <label class="form-field comment">
+        <textarea name="comment" cols="30" rows="10" placeholder="Пару розгорнутих речень з матюками"></textarea>
+        <span>Ваші коментарі</span>
+      </label>
+      
+      <label class="form-field policy">
+        <input class="unvisible" type="checkbox" name="policy">
+        <span class="visible-checkbox"></span>
+        <span class="text">Хочу помиритись</span>
+      </label>  
+
+    <button class="button" type="submit">Жмякни шоб відправити</button>
+  </form>
+  
+
+  <script>
+    (() => {
+      document
+      .querySelector('.js-speaker-form')
+      .addEventListener('submit', e => {
+        e.preventDefault();
+
+        new FormData(e.currentTarget).forEach((value, name) =>
+          console.log(`${name}: ${value}`),
+        );
+      });
+    })();
+  </script>
+</body>
+</html>
